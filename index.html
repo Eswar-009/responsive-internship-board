@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive internship board built for the EdVyro Full Stack Development internship.">
+  <title>Internship Board | Eswar R</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#" aria-label="Internship Board home">
+        <span class="brand-mark">ER</span>
+        <span>Internship<span>Board</span></span>
+      </a>
+      <a class="portfolio-link" href="https://eswar-portfolio-5a856.web.app/" target="_blank" rel="noopener">My Portfolio ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <p class="eyebrow">FULL STACK DEVELOPMENT · TASK 1</p>
+          <h1>Find an internship<br><span>that fits your path.</span></h1>
+          <p class="hero-copy">Explore beginner-friendly opportunities across technology, design, data and more.</p>
+        </div>
+        <div class="hero-card" aria-label="Board statistics">
+          <strong id="resultCount">0</strong>
+          <span>opportunities</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="container board" aria-labelledby="board-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">EXPLORE</p>
+          <h2 id="board-title">Internship opportunities</h2>
+        </div>
+        <button id="clearBtn" class="clear-btn" type="button">Clear filters</button>
+      </div>
+
+      <form class="filters" id="filterForm" role="search">
+        <div class="field search-field">
+          <label for="search">Search internships</label>
+          <input id="search" name="search" type="search" placeholder="Try “frontend” or “AI”" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="domain">Domain</label>
+          <select id="domain" name="domain">
+            <option value="all">All domains</option>
+          </select>
+        </div>
+      </form>
+
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+      <div id="cards" class="cards" aria-live="polite"></div>
+
+      <div id="emptyState" class="empty-state" hidden>
+        <div class="empty-icon">⌕</div>
+        <h3>No internships found</h3>
+        <p>Try another keyword or reset the domain filter.</p>
+        <button id="emptyClear" class="primary-btn" type="button">Show all internships</button>
+      </div>
+
+      <div id="errorState" class="error-state" hidden>
+        <h3>Something went wrong</h3>
+        <p>We could not load the internship data. Please refresh and try again.</p>
+        <button id="retryBtn" class="primary-btn" type="button">Try again</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Built by <strong>Eswar R</strong> · Responsive Internship Board</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
